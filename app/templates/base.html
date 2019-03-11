@@ -2,26 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JD</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>楽しい</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">JD</div>
-        <div class="menu">
-          <div class="element"><a href="#">Главная</a></div>
+    <!-- container = header -->
+    <!-- menu = headerpart -->
+    <!-- element = headerblock -->
+    <div class="container">
+
+      <div class="menu firstMenu">
+        
+        <div class="logo">楽</div>
           <div class="element"><a href="#">О нас</a></div>
+          <div class="element"><a href="#">Главная</a></div>
           <div class="element"><a href="#">Контакты</a></div>
           <div class="element"><a href="#">Обратная связь</a></div>
           <div class="element"><a href="#">Иероглифы</a></div>
-        </div>
-        <div class="menu">
-          <div class="element"><a href="#">Регистрация</a></div>
-          <div class="element"><a href="#">Вход</a></div>
-        </div>
       </div>
-    </header>
+      <div class="menu">
+        <div class="element"><a href="#">Вход</a></div>
+        <div class="element"><a href="#">Регистрация</a></div>
+      </div>
+    </div>
 
     <!-- {% block content %}  {% endblock %} -->
   </body>
