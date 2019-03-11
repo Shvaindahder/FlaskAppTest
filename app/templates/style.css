@@ -6,39 +6,77 @@ body {
   padding: 0;
   margin: 0;
 }
-
+/*
 .menu {
   display: flex;
   flex-direction: row;
-  min-width: 1000px;
-  margin-left: 30px;
+  min-width: 800px;
+  margin-left: 100px;
+
 }
 
 .logo {
   font-size: 45px;
-  color: #996337;
+  color: black;
   font-family: 'Comic Sans MS';
 }
 .logo:hover {
-  color: rgb(191, 55, 71);
+  color: rgb(233, 130, 238);
+  transition: 6s.ease;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  background: rgb(195, 195, 191);
+  background: rgb(224, 215, 217);
+  border-bottom: 0.002px solid rgb(171, 171, 171);
+  font-family: 'Comic Sans MS';
+
 }
 header {
   margin: 0 auto;
+  width: 100%;
 }
 
 .element {
   margin-left: 5px;
   padding: 15px;
-  background: rgb(252, 106, 255);
+  background: rgb(224, 215, 217);
   margin: 10px;
   border-radius: 10px;
+  color: black;
 }
 .element:hover {
-  background: rgb(208, 250, 39);
+  background: rgb(99, 165, 198);
+} */
+.container {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(198, 198, 198);
+
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+.element {
+  margin-left: 5px;
+  padding: 15px;
+  background: rgb(224, 215, 217);
+  margin: 10px;
+  border-radius: 10px;
+  color: black;
+}
+.element:hover {
+  background: rgb(99, 165, 198);
+}
+
+.logo {
+  font-size: 45px;
+  color: black;
+  font-family: 'Comic Sans MS';
+}
+.logo:hover {
+  color: rgb(233, 130, 238);
+  transition: 6s.ease;
 }
