@@ -10,3 +10,5 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hienfi14120s@wsoc03sifne210QQ112024'
     Y_TRANSLATOR_KEY = os.environ.get('Y_TRANSLATOR_KEY')
     ADMINS = ['asimonanm97@gmail.com', 'simonyan.98@mail.com']
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

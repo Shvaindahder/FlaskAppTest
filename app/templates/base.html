@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <title>楽しい</title>
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    {% block styles %} {% endblock %}
   </head>
   <body>
-    <!-- container = header -->
-    <!-- menu = headerpart -->
-    <!-- element = headerblock -->
-    <div class="container">
+      <!-- container = header -->
+      <!-- menu = headerpart -->
+      <!-- element = headerblock -->
+      <div class="container">
 
-      <div class="menu firstMenu">
+            <div class="menu firstMenu">
         
-        <div class="logo">楽</div>
-          <div class="element"><a href="#">О нас</a></div>
-          <div class="element"><a href="#">Главная</a></div>
-          <div class="element"><a href="#">Контакты</a></div>
-          <div class="element"><a href="#">Обратная связь</a></div>
-          <div class="element"><a href="#">Иероглифы</a></div>
+                <div class="logo">楽</div>
+                    <div class="element"><a href="#">О нас</a></div>
+                    <div class="element"><a href="#">Главная</a></div>
+                    <div class="element"><a href="#">Контакты</a></div>
+                    <div class="element"><a href="#">Обратная связь</a></div>
+                    <div class="element"><a href="#">Иероглифы</a></div>
       </div>
       <div class="menu">
-        <div class="element"><a href="#">Вход</a></div>
-        <div class="element"><a href="#">Регистрация</a></div>
+          <div class="element"><a href="{{ url_for('auth.login') }}">Вход</a></div>
+          <div class="element"><a href="{{ url_for('auth.registration') }}">Регистрация</a></div>
       </div>
     </div>
-
-    <!-- {% block content %}  {% endblock %} -->
+    {% block content %} {% endblock %}
   </body>
 </html>
