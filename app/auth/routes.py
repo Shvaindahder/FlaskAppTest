@@ -39,6 +39,6 @@ def registration():
 
 
 @bp.route('/logout')
-def logot():
+def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('main.index'))

@@ -22,8 +22,12 @@
                     <div class="element"><a href="#">Иероглифы</a></div>
       </div>
       <div class="menu">
-          <div class="element"><a href="{{ url_for('auth.login') }}">Вход</a></div>
-          <div class="element"><a href="{{ url_for('auth.registration') }}">Регистрация</a></div>
+          {% if current_user.is_anonymous %}
+                <div class="element"><a href="{{ url_for('auth.login') }}">Вход</a></div>
+                <div class="element"><a href="{{ url_for('auth.registration') }}">Регистрация</a></div>
+          {% else %}
+                <div class="element"><a href="{{ url_for('auth.logout') }}">Выйти</a></div>
+          {% endif %}
       </div>
     </div>
     {% block content %} {% endblock %}
