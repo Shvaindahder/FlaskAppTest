@@ -21,9 +21,9 @@ def upgrade():
     op.create_table('hieroglyph',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('hieroglyph', sa.String(length=1), nullable=True),
-    sa.Column('onyomi', postgresql.ARRAY(sa.String(length=10)), nullable=True),
-    sa.Column('kunyomi', postgresql.ARRAY(sa.String(length=10)), nullable=True),
-    sa.Column('translation', postgresql.ARRAY(sa.String(length=20)), nullable=True),
+    sa.Column('onyomi', postgresql.JSON, nullable=True),
+    sa.Column('kunyomi', postgresql.JSON, nullable=True),
+    sa.Column('translation', postgresql.JSON, nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('hieroglyph')
     )

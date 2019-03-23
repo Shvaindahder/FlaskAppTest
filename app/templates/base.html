@@ -5,6 +5,7 @@
     <title>楽しい</title>
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     {% block styles %} {% endblock %}
+    {% block script %} {% endblock %}
   </head>
   <body>
       <!-- container = header -->
@@ -19,7 +20,9 @@
                     <div class="element"><a href="#">Главная</a></div>
                     <div class="element"><a href="#">Контакты</a></div>
                     <div class="element"><a href="#">Обратная связь</a></div>
-                    <div class="element"><a href="#">Иероглифы</a></div>
+                    <div class="element">
+                        <a href="#">Иероглифы</a>
+                    </div>
       </div>
       <div class="menu">
           {% if current_user.is_anonymous %}

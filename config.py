@@ -12,3 +12,4 @@ class Config(object):
     ADMINS = ['asimonanm97@gmail.com', 'simonyan.98@mail.com']
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    HIEROGLYPHS_PER_PAGE=20

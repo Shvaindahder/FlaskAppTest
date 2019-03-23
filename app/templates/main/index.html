@@ -1,5 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="h_content">
+    {% for h_block in model %}
+    <div class="f_block">
+        {% for h in h_block %}
+            <div class="card">
+            <p>
+                <p>Иероглиф: {{ h.hieroglyph }}</p>
+                <p>Он: {{ h.onyomi }}</p>
+                <p>Кун: {{ h.kunyomi }}</p>
+                <p>Перевод: {{ h.translation }}</p>
+            </p>
+            </div>
+        <hr>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+<div id="nav">
+    <div class="previous {% if not prev_page %} disabled {% endif %}">
+        <a href="{{ prev_page or '#' }}">
+            Previous page
+        </a>
+    </div>
 
+    <div class="next {% if not next_page %} disabled {% endif %}">
+        <a href="{{ next_page or '#' }}">
+            Next page
+        </a>
+    </div>
+</div>
 {% endblock %}

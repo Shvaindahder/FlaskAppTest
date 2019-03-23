@@ -1,7 +1,6 @@
 from app import db, login
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy.dialects.postgresql import ARRAY
 
 
 class UserAccount(UserMixin, db.Model):
@@ -27,9 +26,10 @@ class UserAccount(UserMixin, db.Model):
 class Hieroglyph(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     hieroglyph = db.Column(db.String(1), unique=True)
-    onyomi = db.Column(ARRAY(db.String(10)))
-    kunyomi = db.Column(ARRAY(db.String(10)))
-    translation = db.Column(ARRAY(db.String(20)))
+    onyomi = db.Column(db.JSON)
+    kunyomi = db.Column(db.JSON)
+    translation = db.Column(db.JSON)
+    level = db.Column(db.Integer)
 
     def __repr__(self):
         return '<Hieroglyph {}>'.format(self.hieroglyph)
